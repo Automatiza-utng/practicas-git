@@ -1,0 +1,75 @@
+Realizar el ejercicio mediante línea de comandos en Windows, Linux o Mac:
+-------------------------------------------------------------------------
+
+
+o Configurar los atributos globales de tú usuario y email de Git.
+-----------------------------------------------------------------
+C:\Users\topd0>git config --global user.name "DiegoTorresP"
+C:\Users\topd0>git config --global user.email "1220100050@alumnos.utng.edu.mx"
+
+--------------------------------------------------------------------------
+o Crear una carpeta llamada gitexample e inicializar el repositorio con el comando correspondiente.
+--------------------------------------------------------------------------
+C:\Users\topd0>mkdir gitexample
+C:\Users\topd0>cd gitexample
+C:\Users\topd0\gitexample>git init
+
+------------------------------------------------------------------------
+o Comprueba el estado del reposito a través del comando correspondiente.
+o Crea los siguientes archivos:
+o indice.txt con el siguiente contenido:
+Este es un ejercicio práctico de Git.
+Archivo de contenido
+o archivo1.txt con el siguiente contenido:
+Este es un ejercicio práctico de Git.
+Archivo 1
+o configuracion.conf con el siguiente contenido:
+Este es un ejercicio práctico de Git.
+Archivo de configuración
+------------------------------------------------------------------------
+C:\Users\topd0\gitexample>git status
+C:\Users\topd0\gitexample>copy con indice.txt
+Este es un ejercicio práctico de Git.
+Archivo de contenido^Z
+C:\Users\topd0\gitexample>copy con archivo1.txt
+Este es un ejercicio práctico de Git.
+Archivo 1^Z
+C:\Users\topd0\gitexample>copy con configuracion.conf
+Este es un ejercicio práctico de Git.
+Archivo de configuración^Z
+
+------------------------------------------------------------------------
+o Añadir los archivos al Staging Area mediante el comando correspondiente.
+------------------------------------------------------------------------
+C:\Users\topd0\gitexample>git status
+C:\Users\topd0\gitexample>git add .
+------------------------------------------------------------------------
+o Comprueba el estado del repositorio.
+------------------------------------------------------------------------
+C:\Users\topd0\gitexample>git status
+
+---------------------------------------------------------------------
+o Hacer un commit de los cambios con el mensaje “Introduccion a git”.
+---------------------------------------------------------------------
+C:\Users\topd0\gitexample>git commit -m "Introducción a git"
+
+------------------------------------------------------------------------
+o Mostrar los cambios de la última versión del repositorio con el comando
+correspondiente.
+------------------------------------------------------------------------
+C:\Users\topd0\gitexample>git log
+
+------------------------------------------------------------------------
+o Cambiar el mensaje del último commit por “Añadido Introduccion a Git”
+------------------------------------------------------------------------
+C:\Users\topd0\gitexample>git commit --amend --m "Añadido Introduccion a Git"
+
+-----------------------------------------------------------------------
+o Volver a mostrar los últimos cambios del repositorio.
+-----------------------------------------------------------------------
+C:\Users\topd0\gitexample>git log
+
+-----------------------------------------------------------------------
+o Mostrar la historia del último commit.
+-----------------------------------------------------------------------
+C:\Users\topd0\gitexample>git show 6798152
