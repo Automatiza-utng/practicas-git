@@ -1,0 +1,118 @@
+------Configurar los atributos globales de tú usuario y email de Git.
+C:\Users\HP\OneDrive\Documentos>git config --global user.name
+FatimaRuiz123
+
+C:\Users\HP\OneDrive\Documentos>git config --global user.name "FatimaRuiz141"
+
+C:\Users\HP\OneDrive\Documentos>git config --global user.email
+fatimiruiz141@gmail.com
+
+C:\Users\HP\OneDrive\Documentos>git config --global user.email "fatimiruiz141@gmail.com"
+
+-----Crear una carpeta llamada gitexample e inicializar el repositorio con el comando correspondiente.
+C:\Users\HP\OneDrive\Documentos>mkdir gitexample
+
+C:\Users\HP\OneDrive\Documentos>cd gitexample
+
+C:\Users\HP\OneDrive\Documentos\gitexample>git init
+Initialized empty Git repository in C:/Users/HP/OneDrive/Documentos/gitexample/.git/
+
+------Comprueba el estado del repositorio a través del comando correspondiente.
+C:\Users\HP\OneDrive\Documentos\gitexample>git status
+On branch master
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+
+-------Crea los siguientes archivos:
+	indice.txt con el siguiente contenido:
+		Este es un ejercicio práctico de Git.
+		Archivo de contenido
+	archivo1.txt con el siguiente contenido:
+		Este es un ejercicio práctico de Git.
+		Archivo 1
+	configuracion.conf con el siguiente contenido:
+		Este es un ejercicio práctico de Git.
+		Archivo de configuración
+C:\Users\HP\OneDrive\Documentos\gitexample>copy con indice.txt
+Este es un ejercicio práctico de Git.
+Archivo de contenido^Z
+        1 archivo(s) copiado(s).
+
+C:\Users\HP\OneDrive\Documentos\gitexample>copy con archivo1.txt
+Este es un ejercicio práctico de Git.
+Archivo 1
+^Z        1 archivo(s) copiado(s).
+
+C:\Users\HP\OneDrive\Documentos\gitexample>copy con configuracion.conf
+Este es un ejercicio práctico de Git.
+Archivo de configuración^Z
+        1 archivo(s) copiado(s).
+
+-------Añadir los archivos al Stanging Area mediante el comando correspondiente.
+C:\Users\HP\OneDrive\Documentos\gitexample>git add.
+git: 'add.' is not a git command. See 'git --help'.
+
+The most similar command is
+        add
+
+C:\Users\HP\OneDrive\Documentos\gitexample>git add .
+
+-------Comprueba el estado del repositorio.
+C:\Users\HP\OneDrive\Documentos\gitexample>git status
+On branch master
+nothing to commit, working tree clean
+
+-------Hacer un commit de los cambios con el mensaje “Introduccion a git”.
+C:\Users\HP\OneDrive\Documentos\gitexample>git commit -m "Primer commit"
+[master (root-commit) 92f98c3] Primer commit
+ 3 files changed, 6 insertions(+)
+ create mode 100644 archivo1.txt
+ create mode 100644 configuracion.conf
+ create mode 100644 indice.txt
+
+-------Mostrar los cambios de la última versión del repositorio con el comando correspondiente.
+C:\Users\HP\OneDrive\Documentos\gitexample>git show
+commit 92f98c300b9b12adab3634275c951a6c5eb58c43 (HEAD -> master)
+Author: FatimaRuiz141 <fatimiruiz141@gmail.com>
+Date:   Tue May 23 17:08:52 2023 -0600
+
+    Primer commit
+
+diff --git a/archivo1.txt b/archivo1.txt
+new file mode 100644
+index 0000000..6a7fe23
+--- /dev/null
++++ b/archivo1.txt
+@@ -0,0 +1,2 @@
++Este es un ejercicio pr<A0>ctico de Git.
++Archivo 1
+diff --git a/configuracion.conf b/configuracion.conf
+
+-------Cambiar el mensaje del último commit por “Añadido Introduccion a Git”
+C:\Users\HP\OneDrive\Documentos\gitexample>git commit --amend -m "Añadido Introduccion a Git"
+[master f0a0140] Añadido Introduccion a Git
+ Date: Tue May 23 17:08:52 2023 -0600
+ 3 files changed, 6 insertions(+)
+ create mode 100644 archivo1.txt
+ create mode 100644 configuracion.conf
+ create mode 100644 indice.txt
+
+-------Volver a mostrar los últimos cambios del repositorio.
+C:\Users\HP\OneDrive\Documentos\gitexample>git reflog
+f0a0140 (HEAD -> master) HEAD@{0}: commit (amend): Añadido Introduccion a Git
+92f98c3 HEAD@{1}: commit (initial): Primer commit
+
+-------Mostrar la historia del último commit.
+C:\Users\HP\OneDrive\Documentos\gitexample>git show --stat
+commit f0a014020f891f5a15d84e30a1cc321d94b05182 (HEAD -> master)
+Author: FatimaRuiz141 <fatimiruiz141@gmail.com>
+Date:   Tue May 23 17:08:52 2023 -0600
+
+    Añadido Introduccion a Git
+
+ archivo1.txt       | 2 ++
+ configuracion.conf | 2 ++
+ indice.txt         | 2 ++
+ 3 files changed, 6 insertions(+)
