@@ -1,0 +1,73 @@
+Agregar las configuraciones globales
+git config --global user.name "Yop789"
+
+git config --global user.email "2000djpz@gmail.com"
+
+
+Crear la carpeta
+mkdir gitexample
+
+
+inicialisar el repocitorio
+git init
+
+Estatus del repocitorio 
+git status
+
+estatus despues de crear los archivos 
+git status
+
+agregar a un area 
+git add .
+
+
+Status despues de agregar al area 
+git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   archivo1.txt
+        new file:   configuracion.conf
+        new file:   indice.txt
+Commit 
+git commit -m "Introduccion
+a git"
+[master (root-commit) 5919216] Introduccion a git
+ 3 files changed, 6 insertions(+)
+ create mode 100644 archivo1.txt
+ create mode 100644 configuracion.conf
+ create mode 100644 indice.txt
+
+ver las verciones
+>git reflog
+5919216 (HEAD -> master) HEAD@{0}: commit (initial): Introduccion a git
+
+Cambiar el mensaje del la ultima vercion 
+>git commit --amend -m "Añadido Introduccion a Git"
+[master b488f62] Añadido Introduccion a Git
+ Date: Tue May 23 16:55:52 2023 -0600
+ 3 files changed, 6 insertions(+)
+ create mode 100644 archivo1.txt
+ create mode 100644 configuracion.conf
+ create mode 100644 indice.txt
+
+Ver verciones del git despues de cambiar el texto 
+git reflog
+b488f62 (HEAD -> master) HEAD@{0}: commit (amend): Añadido Introduccion a Git
+5919216 HEAD@{1}: commit (initial): Introduccion a git
+
+la ultima vercion del git  
+git show --stat
+commit b488f62945eb0665f667612ec6cf1410524ba351 (HEAD -> master)
+Author: Yop789 <2000djpz@gmail.com>
+Date:   Tue May 23 16:55:52 2023 -0600
+
+    Añadido Introduccion a Git
+
+ archivo1.txt       | 2 ++
+ configuracion.conf | 2 ++
+ indice.txt         | 2 ++
+ 3 files changed, 6 insertions(+)
