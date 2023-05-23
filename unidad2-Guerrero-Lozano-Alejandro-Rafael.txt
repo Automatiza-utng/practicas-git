@@ -1,0 +1,40 @@
+//Crear carpeta
+mkdir gitexample
+
+//Ingresar a la capeta
+cd gitexample/
+
+//Inicializar el repositorio local
+git init
+
+//Verificar el estatus
+git status
+
+//Crea los siguientes archivos
+nano indice.txt
+
+nano archivo1.txt
+
+nano configuracion.conf
+
+//Añadir los archivos al Staging Area mediante el comando correspondiente.
+git add archivo1.txt configuracion.conf indice.txt
+
+//Comprueba el estado del repositorio
+git status
+
+//Hacer un commit de los cambios con el mensaje “Introduccion a git”
+git commit -m "Introduccion a git"
+
+//Mostrar los cambios de la última versión del repositorio con el comando
+//correspondiente.
+git show 699a7bc
+
+//Cambiar el mensaje del último commit por “Añadido Introduccion a Git”
+git commit --amend -m "Añadido Introduccion a Git"
+
+//Volver a mostrar los últimos cambios del repositorio.
+git log
+
+//Mostrar la historia del último commit.
+git show 8066d36
