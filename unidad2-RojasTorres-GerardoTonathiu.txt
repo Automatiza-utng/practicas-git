@@ -1,0 +1,62 @@
+-- Configurar los atributos globales de tú usuario y email de Git.
+>git config --global user.name "tona1920"
+>git config --global user.email "tonathiu123456@gmail.com"
+
+-- Crear una carpeta llamada gitexample e inicializar el repositorio con el comando correspondiente.
+>mkdir gitexample
+>cd gitexample
+>git init
+
+-- Comprueba el estado del repositorio a través del comando correspondiente.
+>git status
+
+-- Crea los siguientes archivos:
+
+----- indice.txt con el siguiente contenido:
+--------- Este es un ejercicio práctico de Git.
+--------- Archivo de contenido
+
+>copy con indice.txt
+Este es un ejercicio práctico de Git.
+Archivo de contenido.^Z
+
+----- archivo1.txt con el siguiente contenido:
+---------- Este es un ejercicio práctico de Git.
+---------- Archivo 1
+>copy con archivo1.txt
+Este es un ejercicio práctico de Git.
+Archivo 1.^Z
+
+----- configuracion.conf con el siguiente contenido:
+----------- Este es un ejercicio práctico de Git.
+----------- Archivo de configuración
+>copy con configuracion.conf
+Este es un ejercicio práctico de Git.
+Archivo de configuración.^Z
+
+
+-- Añadir los archivos al Stanging Area mediante el comando correspondiente.
+>git add .
+
+-- Comprueba el estado del repositorio.
+>git status
+
+-- Hacer un commit de los cambios con el mensaje “Introduccion a git”.
+>git commit -m "Introduccion a git"
+
+--Mostrar los cambios de la última versión del repositorio con el comando correspondiente.
+>git reflog
+>git show 0064096
+
+-- Cambiar el mensaje del último commit por “Añadido Introduccion a Git”
+>git commit --amend -m "Añadido Introduccion a Git"
+
+-- Volver a mostrar los últimos cambios del repositorio.
+>git reflog
+
+-- Mostrar la historia del último commit.
+>git reflog
+>git show 9eba102
+
+
+
